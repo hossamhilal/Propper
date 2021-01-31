@@ -1163,8 +1163,8 @@ header .container {
     flex-direction: row-reverse;
     position: absolute;
     bottom: 30px;
-    right: 10%;
-    width: 150px;
+    right: 11%;
+    width: 80px;
 }
 
 @media screen and (max-width:768px) {
