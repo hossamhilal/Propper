@@ -3,9 +3,9 @@
     "use strict";
 
     // remove scrollbar when loading 
-    $(window).on('load', function(){
-        $('body').addClass('stopScroll');
-    });
+    // $(window).on('load', function () {
+    //     $('body').addClass('stopScroll');
+    // });
 
     // OPEN SIDE  MENU 
     $('.menuBtn').on('click', function () {
@@ -18,22 +18,23 @@
     });
 
     // Scroll Menu
-    $('.headerNav a').on('click', function(e) {
+    $('.headerNav a').on('click', function (e) {
         e.preventDefault();
-        $('.headerNav li').removeClass('active');    
+        $('.headerNav li').removeClass('active');
         $(this).parent().addClass('active');
-        $('html, body').animate({ 
+        $('html, body').animate({
             scrollTop: $($(this).attr('href')).offset().top - 100
         }, 1200, 'linear');
     });
 
     // Fixed NavBar 
-    window.onscroll = function() {
-        var topElement = document.getElementById('features') ,
-            Header = document.getElementsByTagName('header') ,
+    window.onscroll = function () {
+        var topElement = document.getElementById('features'),
+            Header = document.getElementsByTagName('header'),
             Top = topElement.offsetTop;
-        window.pageYOffset >= Top + 200 && window.innerWidth > 992  ? $(Header).addClass("fixedNav") : $(Header).removeClass("fixedNav");
+        window.pageYOffset >= Top + 200 && window.innerWidth > 992 ? $(Header).addClass("fixedNav") : $(Header).removeClass("fixedNav");
     }
+
 
     // check If Rtl 
     var rtlVal = false;
