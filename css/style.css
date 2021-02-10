@@ -164,7 +164,6 @@ button:focus {
 
 header {
     position: relative;
-    overflow: hidden;
     padding: 40px 0;
     /* background: url('../images/gallery-1.jpg') no-repeat; */
     /* background-size: cover; */
