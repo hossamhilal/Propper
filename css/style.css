@@ -165,8 +165,7 @@ button:focus {
 header {
     position: relative;
     padding: 40px 0;
-    /* background: url('../images/gallery-1.jpg') no-repeat; */
-    /* background-size: cover; */
+    z-index: 9;
 }
 
 header::before {

@@ -19,12 +19,14 @@
 
     // Scroll Menu
     $('.headerNav a').on('click', function (e) {
-        e.preventDefault();
+        if(!$(this).hasClass(dropdown)) {
+            e.preventDefault();
+            $('html, body').animate({
+                scrollTop: $($(this).attr('href')).offset().top - 100
+            }, 1200, 'linear');
+        }
         $('.headerNav li').removeClass('active');
         $(this).parent().addClass('active');
-        $('html, body').animate({
-            scrollTop: $($(this).attr('href')).offset().top - 100
-        }, 1200, 'linear');
     });
 
     // Fixed NavBar 
